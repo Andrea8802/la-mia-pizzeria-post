@@ -1,0 +1,17 @@
+﻿@model List<Pizza>
+
+<ul class="container">
+    @foreach(Pizza pizza in Model)
+    {
+        <a href="@Url.Action("Details", "Pizza", new{id=@pizza.Id})" style="text-decoration: none;
+    color: black;">
+            <li class="card">
+                <img src="@pizza.Img" alt="Pizza1">
+                <div class="card-body">
+                    <h5 class="card-title">@pizza.Nome</h5>
+                    <h6>@pizza.Prezzo&euro;</h6>
+                </div>
+            </li>
+        </a>
+    }
+</ul>
